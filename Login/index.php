@@ -26,6 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	
@@ -34,12 +35,12 @@
 			<div class="wrap-login100 p-b-160 p-t-50">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-43">
-						Login Here - Happy To Help :)
+						Login
 					</span>
 					
 					<div class="wrap-input100 rs1 validate-input" data-validate = "Username is required">
-						<input class="input100" type="text" name="username">
-						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="username" >
+						<span class="label-input100">Username</span>
 					</div>
 					
 					
