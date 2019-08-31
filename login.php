@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>TechSoldier</title>
+	<title>Login | TechSoldier</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -32,22 +32,32 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-b-160 p-t-50">
+				<form action="login_process.php" class="login100-form validate-form" method="POST">
+					<span class="login100-form-title p-b-43">
+						Login
+					</span>
+					
+					<div class="wrap-input100 rs1 validate-input" data-validate = "Username is required">
+						<input class="input100" type="text" name="user" id="user" >
+						<span class="label-input100">Username</span>
+					</div>
+					
+					
+					<div class="wrap-input100 rs2 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="pass" id="pass">
+						<span class="label-input100">Password</span>
+					</div>
 
-				<form action="signup.php" class="login100-form validate-form" method="POST">
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							SignUp
+							Login
 						</button>
 					</div>
-				</form>
-				<form action="login.php" class="login100-form validate-form" method="POST">
-					<div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" text="Login" value="Login">
-					</div>
-				</form>	
+					
 					<div class="text-center w-full p-t-23">
 						
 					</div>
+				</form>
 			</div>
 		</div>
 	</div>
