@@ -1,3 +1,25 @@
+<?php 
+$msg="";
+$dbflag=0;
+$flag=0;
+try{
+	$username = $_POST['user'];
+	$password = $_POST['pass'];
+	$conn = new mysqli('localhost','root','','techsoldier');
+	//echo "Connection is established...<br/>";
+	//$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	$sql="select username from user_info where username='$username' and password='$password'";
+	$result=$conn->query($sql);
+	$msg=$result;
+	$dbflag=1;
+	//echo $msg;
+}
+catch(PDOException $e){
+	$dbflag=2;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,17 +54,44 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-b-160 p-t-50">
+				<?php
+					if($dbflag==2){ echo "Database connection issue";}
+					else{
+						if ($result->num_rows > 0) {
+							$flag=1;
+							$msg="you are valid";
+							?>
+							<form action="main.php" class="login100-form validate-form" method="POST">
+							<span class="login100-form-title p-b-43">
+								<?php echo $msg;?>
+							</span>
+							<div class="container-login100-form-btn">
+								<button class="login100-form-btn">
+									Let's Go
+								</button>
+							</div>
+							</form>
+							<?php
+						}
+						else {
+							$flag=2;
+							$msg="you are invalid";
+							?>
+							<form action="login.php" class="login100-form validate-form" method="POST">
+							<span class="login100-form-title p-b-43">
+								<?php echo $msg;?>
+							</span>
+							<div class="container-login100-form-btn">
+								<button class="login100-form-btn">
+									Try Again
+								</button>
+							</div>
+							</form>
+							<?php
+						}
+					}
+				?>
 
-				<form action="login.php" class="login100-form validate-form" method="POST">
-					<span class="login100-form-title p-b-43">
-						Page is under construction.
-					</span>
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Get Back
-						</button>
-					</div>
-				</form>
 
 			</div>
 		</div>

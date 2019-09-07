@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>TechSoldier</title>
+	<title>Home | TechSoldier</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -32,23 +32,11 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-b-160 p-t-50">
-
-				<form action="signup.php" class="login100-form validate-form" method="POST">
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							SignUp
-						</button>
-					</div>
+				<form action="login_process.php" class="login100-form validate-form" method="POST">
+					<span class="login100-form-title p-b-43">
+						Main page is under construction
+					</span>					
 				</form>
-				<br/>
-				<form action="login.php" class="login100-form validate-form" method="POST">
-					<div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" text="Login" value="Login">
-					</div>
-				</form>	
-					<div class="text-center w-full p-t-23">
-						
-					</div>
 			</div>
 		</div>
 	</div>
