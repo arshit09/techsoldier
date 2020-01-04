@@ -197,7 +197,7 @@ iframe {
   font-size: 30px;
   color: #fefefe;
   line-height: 1.2;
-  text-transform: uppercase;
+  
   text-align: center;
 }
 
@@ -340,6 +340,9 @@ input.input100 {
   height: 70px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
   overflow: hidden;
   background: #111111;
 
